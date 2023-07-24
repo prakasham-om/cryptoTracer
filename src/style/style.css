@@ -1,0 +1,54 @@
+body{
+    
+    width: 100%;
+    position: fixed;
+}
+.bgcolor{
+  background-color: #2C3639;
+
+}
+.bg-successs{
+  background-color: #1A5D1A;
+}
+.card{
+    border-radius: 15px;
+    box-shadow: -3px 3px -3px  gray;
+   
+}
+img{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px gray;
+
+}
+img:hover{
+    transform: rotate(50deg);
+}
+
+.containers{
+    height: 90vh;
+   
+    overflow: scroll;
+}
+.cols{
+   position: fixed;
+    z-index: 1;
+}
+@media (max-width: 1000px) {
+    .bigScreen {
+      display:none;
+    }
+    .smallScreen {
+      display:block;
+    }
+  }
+  
+  @media (min-width: 1001px) {
+    .bigScreen {
+      display:block;
+      color: chartreuse;
+    }
+    .smallScreen {
+      display:none;
+    }
+  }
+  

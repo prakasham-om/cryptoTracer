@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Crypto from "./components/Crypto"
+import Context from "./components/context/createContext";
+import { useEffect,useState } from "react";
+import './style/style.css'
 
 function App() {
+  let [data,setData]=useState([]);
+  let fetchData=async()=>{
+    try{
+      let response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd');
+      if(! response.ok){
+        throw Error("Data is not fetching");
+      }
+      let fetchdata=await response.json();
+      setData(fetchdata)
+        
+
+    }catch(err){
+      console.log(err);
+    }
+  }
+  useEffect(()=>{
+    fetchData();
+  },[])
+  console.log(data)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+
+   < Context.Provider value={data} >
+      <Crypto/>
+      
+      </Context.Provider>
+
     </div>
   );
 }
