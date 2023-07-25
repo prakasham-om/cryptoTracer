@@ -125,8 +125,8 @@ export default function Crypto() {
     </div>
     <footer class="text-center text-dark bg-white" >
     <div class="text-center text-dark p-3" >
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      © Copyright by
+      <a class="text-dark" href="">CryptoTracer Pvt Ltd</a>
     </div>
    
   </footer>
