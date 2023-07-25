@@ -5,6 +5,10 @@ import './style/style.css'
 
 function App() {
   let [data,setData]=useState([]);
+  let [news,setNews]=useState([]);
+
+
+  
   let fetchData=async()=>{
     try{
       let response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd');
@@ -21,8 +25,9 @@ function App() {
   }
   useEffect(()=>{
     fetchData();
+  
   },[])
-  console.log(data)
+  
 
   return (
     <div>

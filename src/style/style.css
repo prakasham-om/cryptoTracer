@@ -1,23 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
     
     width: 100%;
-    position: fixed;
+    background-color: #030919;
+    
 }
 .bgcolor{
   background-color: #2C3639;
 
 }
-.bg-successs{
-  background-color: #1A5D1A;
-}
+
+
 .card{
+    height: 15rem;
     border-radius: 15px;
     box-shadow: -3px 3px -3px  gray;
+    background-color: #738b7323;
+    color: wheat;
+    position: relative;
    
 }
 img{
     border-radius: 15px;
     box-shadow: 3px 3px 3px gray;
+    
 
 }
 img:hover{
@@ -25,9 +35,10 @@ img:hover{
 }
 
 .containers{
-    height: 90vh;
-   
-    overflow: scroll;
+    height: 86vh;
+    overflow: auto;
+    position: relative;
+
 }
 .cols{
    position: fixed;
